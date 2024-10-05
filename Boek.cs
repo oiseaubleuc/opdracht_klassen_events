@@ -18,7 +18,6 @@ public class Boek
             }
         }
 
-        // Constructor
         public Boek(string isbn, string naam, string uitgever, decimal prijs)
         {
             Isbn = isbn;
@@ -27,13 +26,11 @@ public class Boek
             Prijs = prijs;
         }
 
-        // Overriden ToString methode
         public override string ToString()
         {
             return $"ISBN: {Isbn}, Naam: {Naam}, Uitgever: {Uitgever}, Prijs: {Prijs}€";
         }
 
-        // Invoermethode (Lees)
         public void Lees()
         {
             Console.WriteLine("Geef ISBN:");

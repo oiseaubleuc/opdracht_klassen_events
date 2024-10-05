@@ -12,3 +12,4 @@
 /Users/hamouchihoudaifa/RiderProjects/Opdracht Boekenwinkel/Opdracht Boekenwinkel/obj/Debug/net8.0/Opdracht Boekenwinkel.pdb
 /Users/hamouchihoudaifa/RiderProjects/Opdracht Boekenwinkel/Opdracht Boekenwinkel/obj/Debug/net8.0/Opdracht Boekenwinkel.genruntimeconfig.cache
 /Users/hamouchihoudaifa/RiderProjects/Opdracht Boekenwinkel/Opdracht Boekenwinkel/obj/Debug/net8.0/ref/Opdracht Boekenwinkel.dll
+/Users/hamouchihoudaifa/RiderProjects/Opdracht Boekenwinkel/Opdracht Boekenwinkel/obj/Debug/net8.0/Opdracht Boekenwinkel.sourcelink.json

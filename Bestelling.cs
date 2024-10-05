@@ -9,7 +9,6 @@ public class Bestelling<T>
     public int Aantal { get; set; }
     public Verschijningsperiode? AbonnementPeriode { get; set; }
 
-    // Constructor
     public Bestelling(T item, int aantal, Verschijningsperiode? periode = null)
     {
         Id = ++_volgnummer;
@@ -19,7 +18,6 @@ public class Bestelling<T>
         AbonnementPeriode = periode;
     }
 
-    // Methode die een tuple retourneert
     public (string, int, decimal) Bestel()
     {
         if (Item is Boek boek)
@@ -30,10 +28,8 @@ public class Bestelling<T>
         throw new InvalidOperationException("Item is geen boek.");
     }
 
-    // Event voor het plaatsen van een bestelling
     public event Action<string> BestellingGeplaatst;
 
-    // Methode die een bestelling plaatst en het event triggert
     public void PlaatsBestelling()
     {
         var bestellingInfo = Bestel();
