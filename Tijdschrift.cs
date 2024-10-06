@@ -1,16 +1,14 @@
-namespace Opdracht_Boekenwinkel;
-
-public enum Verschijningsperiode
+namespace Opdracht_Boekenwinkel
 {
-    Dagelijks,
-    Wekelijks,
-    Maandelijks
-}
+    public enum Verschijningsperiode
+    {
+        Dagelijks,
+        Wekelijks,
+        Maandelijks
+    }
 
-
-public class Tijdschrift : Boek
-{
-    
+    public class Tijdschrift : Boek
+    {
         public Verschijningsperiode Periode { get; set; }
 
         public Tijdschrift(string isbn, string naam, string uitgever, decimal prijs, Verschijningsperiode periode)
@@ -31,4 +29,4 @@ public class Tijdschrift : Boek
             Periode = (Verschijningsperiode)Enum.Parse(typeof(Verschijningsperiode), Console.ReadLine(), true);
         }
     }
-
+}

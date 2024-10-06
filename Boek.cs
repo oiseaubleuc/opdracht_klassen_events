@@ -1,6 +1,6 @@
-namespace Opdracht_Boekenwinkel;
-
-public class Boek
+namespace Opdracht_Boekenwinkel
+{
+    public class Boek
     {
         public string Isbn { get; set; }
         public string Naam { get; set; }
@@ -43,5 +43,4 @@ public class Boek
             Prijs = Convert.ToDecimal(Console.ReadLine());
         }
     }
-
-    
+}

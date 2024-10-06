@@ -1,8 +1,7 @@
-namespace Opdracht_Boekenwinkel;
-
-public class Program
+namespace Opdracht_Boekenwinkel
 {
-   
+    public class Program
+    {
         static void Main(string[] args)
         {
             Boek boek1 = new Boek("123-456", "Boek A", "Uitgever A", 20m);
@@ -16,5 +15,5 @@ public class Program
             bestellingTijdschrift.BestellingGeplaatst += Bericht => Console.WriteLine(Bericht);
             bestellingTijdschrift.PlaatsBestelling();
         }
+    }
 }
-

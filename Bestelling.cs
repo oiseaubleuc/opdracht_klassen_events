@@ -1,39 +1,39 @@
-namespace Opdracht_Boekenwinkel;
-
-public class Bestelling<T>
+namespace Opdracht_Boekenwinkel
 {
-    private static int _volgnummer = 0;
-    public int Id { get; private set; }
-    public T Item { get; set; }
-    public DateTime Datum { get; set; }
-    public int Aantal { get; set; }
-    public Verschijningsperiode? AbonnementPeriode { get; set; }
-
-    public Bestelling(T item, int aantal, Verschijningsperiode? periode = null)
+    public class Bestelling<T>
     {
-        Id = ++_volgnummer;
-        Item = item;
-        Aantal = aantal;
-        Datum = DateTime.Now;
-        AbonnementPeriode = periode;
-    }
+        private static int _volgnummer = 0;
+        public int Id { get; private set; }
+        public T Item { get; set; }
+        public DateTime Datum { get; set; }
+        public int Aantal { get; set; }
+        public Verschijningsperiode? AbonnementPeriode { get; set; }
 
-    public (string, int, decimal) Bestel()
-    {
-        if (Item is Boek boek)
+        public Bestelling(T item, int aantal, Verschijningsperiode? periode = null)
         {
-            decimal totalePrijs = boek.Prijs * Aantal;
-            return (boek.Isbn, Aantal, totalePrijs);
+            Id = ++_volgnummer;
+            Item = item;
+            Aantal = aantal;
+            Datum = DateTime.Now;
+            AbonnementPeriode = periode;
         }
-        throw new InvalidOperationException("Item is geen boek.");
-    }
 
-    public event Action<string> BestellingGeplaatst;
+        public (string, int, decimal) Bestel()
+        {
+            if (Item is Boek boek)
+            {
+                decimal totalePrijs = boek.Prijs * Aantal;
+                return (boek.Isbn, Aantal, totalePrijs);
+            }
+            throw new InvalidOperationException("Item is geen boek.");
+        }
 
-    public void PlaatsBestelling()
-    {
-        var bestellingInfo = Bestel();
-        BestellingGeplaatst?.Invoke($"Bestelling geplaatst voor ISBN: {bestellingInfo.Item1}, Aantal: {bestellingInfo.Item2}, Totale prijs: {bestellingInfo.Item3}€");
+        public event Action<string> BestellingGeplaatst;
+
+        public void PlaatsBestelling()
+        {
+            var bestellingInfo = Bestel();
+            BestellingGeplaatst?.Invoke($"Bestelling geplaatst voor ISBN: {bestellingInfo.Item1}, Aantal: {bestellingInfo.Item2}, Totale prijs: {bestellingInfo.Item3}€");
+        }
     }
-    
 }

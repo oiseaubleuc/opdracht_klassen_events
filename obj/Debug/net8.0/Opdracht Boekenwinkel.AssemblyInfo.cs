@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Opdracht Boekenwinkel")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+58c2b0f342c245c7b30a83e3080ba6ab5e4aff8c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9abca74484be859ff8a2d34b65eaa9cbbea2bbb9")]
 [assembly: System.Reflection.AssemblyProductAttribute("Opdracht Boekenwinkel")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Opdracht Boekenwinkel")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
